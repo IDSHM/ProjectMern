@@ -323,6 +323,20 @@ router.get("/bookappo/:id", async (req, res) => {
 router.get("/book/getdata/:id",async (req, res) => {
   try {
       let agentId = req.params.id;
+      console.log(agentId);
+      const alPro = await AppoModel.find({'propertyDetails.id':agentId});
+      console.log(alPro);
+      res.send({ status: "ok", data: alPro})
+  
+  } catch (error) {
+      console.log(error);
+  }
+});
+
+
+
+router.get("/books/getdatas",async (req, res) => {
+  try {
       const alPro = await AppoModel.find({});
       res.send({ status: "ok", data: alPro})
   
@@ -396,6 +410,18 @@ router.post("/contact", (req, res) => {
 
   });
 
+
+  router.get('/getcontact/data', async (req, res) => {
+
+    try {
+        const allagent = await ctModels.find({});
+        res.send({ status: "ok", data: allagent})
+  
+    } catch (error) {
+        console.log(error);
+    }
+  
+  })
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

@@ -15,7 +15,7 @@ const appoSchema = new mongoose.Schema({
         type: String
     },
     propertyDetails: {
-        id: Number,
+        id: String,
         image: {
             type: String,
         },

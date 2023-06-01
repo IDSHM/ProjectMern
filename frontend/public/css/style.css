@@ -6,9 +6,7 @@
     --dark: #0E2E50;
 }
 
-body{
-    background: url('./img/back.jpg');
-}
+
 
 .back-to-top {
     position: fixed;

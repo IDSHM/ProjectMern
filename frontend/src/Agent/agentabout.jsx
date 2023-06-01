@@ -77,11 +77,11 @@ return (
                         </div>
                     </div>
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                        <h1 className="mb-4">#1 Place To Find The Perfect Property</h1>
-                        <p className="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
-                        <p><i className="fa fa-check text-warning me-3"></i>ABCD</p>
-                        <p><i className="fa fa-check text-warning me-3"></i>WXYZ</p>
-                        <p><i className="fa fa-check text-warning me-3"></i>MNOP</p>
+                        <h1 className="mb-4"># Place To Find The Perfect Property</h1>
+                        <p className="mb-4">Welcome to a realm where dreams take shape, where walls whisper stories, and where every door opens to a world of possibilities. In this vast tapestry of real estate, we invite you to embark on a journey of finding your perfect haven, a place where memories are woven and futures are forged. Whether you seek a tranquil abode nestled in nature's embrace or a vibrant urban retreat pulsating with energy, we are here to guide you through every step of the way, weaving together expertise, trust, and unparalleled service. Together, let's paint your vision on the canvas of reality, as we build not just houses, but the foundations of your dreams. Welcome to the extraordinary world of real estate, where we turn your aspirations into a tangible place called home.</p>
+                        <p><i className="fa fa-check text-warning me-3"></i>Chandigarh</p>
+                        <p><i className="fa fa-check text-warning me-3"></i>Ludhiana</p>
+                        <p><i className="fa fa-check text-warning me-3"></i>Mohali</p>
                         <a className="btn btn-warning py-3 px-5 mt-3" href=" ">Read More</a>
                     </div>
                 </div>
@@ -100,10 +100,11 @@ return (
                             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                                 <div className="mb-4">
                                     <h1 className="mb-3">Contact With Our Certified Agent</h1>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
+                                    <p>"Connect with our team of certified agents and open the door to your real estate aspirations."
+"Take the first step towards your dream property by reaching out to our experienced and certified agents today."</p>
                                 </div>
                                 <Link to="/agentcontact" className="btn btn-warning py-3 px-4 me-2"><i className="fa fa-phone-alt me-2"></i>Make A Call</Link>
-                                <Link to="/agentcontact" className="btn btn-dark py-3 px-4"><i className="fa fa-calendar-alt me-2"></i>Get Appoinment</Link>
+                                <Link to="/check" className="btn btn-dark py-3 px-4"><i className="fa fa-calendar-alt me-2"></i>Check Appoinment</Link>
                             </div>
                         </div>
                     </div>
@@ -162,7 +163,7 @@ return (
                     </div>
                     <div className="col-lg-3 col-md-6">
                         <h5 className="text-white mb-4">Newsletter</h5>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <p>"Unlock your dream home."</p>
                         <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
                             <input className="form-control bg-transparent text-white w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
                             <button type="button" className="btn btn-warning py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>

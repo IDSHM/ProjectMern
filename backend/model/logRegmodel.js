@@ -37,6 +37,7 @@ const regSchema = new mongoose.Schema({
     agentdescription:{
         type:String
     },
+    
 })
 
 const Model = mongoose.model('Logs', regSchema);

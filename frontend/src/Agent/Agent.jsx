@@ -38,36 +38,13 @@ const logout = () => {
 }
 
 
-  return (
+return (
     <>
-      {/* <div className="container">
-        <h2>Agent Property</h2>
-
-        <Link to="/getappo"><button>Check Appo</button></Link>
-        <br/>
-          {properties.map((property) => (
-          <div class="row">
-              <div class="column">
-                <div class="card">
-                  <img className="card-img-top" src={property.image} alt=" " style={{width:"100%"}}/>
-                    <div className="card-body">
-                      <h4 className="card-title">{property.name}</h4>
-                      <p className="card-text">{property.description}</p>
-                      <Link to={`/single/${property._id}`} className="btn btn-primary">
-                      See Profile
-                      </Link>                    
-            </div>
-                </div>    
-              </div>
-          </div>
-          ))}
-        <br/>
-  
-      </div>  */}
 
 
 
-      <div className="container-xxl bg-white p-0">
+
+    <div className="container-xxl bg-white p-0">
     
 
     <div className="container-fluid nav-bar bg-transparent">
@@ -94,7 +71,7 @@ const logout = () => {
                     </div>
                     <Link to="/agentcontact" className="nav-item nav-link">Contact</Link>
                 </div>
-                <Link to="/getappo" className="btn btn-warning px-3 d-none d-lg-flex">Check Appointment</Link>
+                <Link to="/check" className="btn btn-warning px-3 d-none d-lg-flex">Check Appointment</Link>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <Link to="" onClick={logout} className="btn btn-warning px-3 d-none d-lg-flex">Logout</Link>
             </div>
@@ -146,7 +123,7 @@ const logout = () => {
                 <div className="col-lg-6">
                     <div className="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
                         <h1 className="mb-3">Property Listing</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
+                        <p>Discover the extraordinary possibilities that await you in the world of real estate.</p>
                     </div>
 
                 </div>
@@ -174,7 +151,7 @@ const logout = () => {
                         <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div className="property-item rounded overflow-hidden">
                                 <div className="position-relative overflow-hidden">
-                                    <a href=" "><img className="" src={product.image} alt="" style={{height:"300px", width:"100%"}}/></a>
+                                <Link to={`/agentpropdetail/${product._id}`}><img className="" src={product.image} alt="" style={{height:"300px", width:"100%"}}/></Link>
                                     {/* <div className="bg-warning rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
                                     <div className="bg-white rounded-top text-warning position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Appartment</div> */}
                                 </div>
@@ -185,8 +162,8 @@ const logout = () => {
                                 </div>
                                 <div className="d-flex border-top">
                                     <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-warning me-2"></i>{product.area} Sqft</small>
-                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-warning me-2"></i>{product.bed} Bed</small>
-                                    <small className="flex-fill text-center py-2"><i className="fa fa-bath text-warning me-2"></i>{product.bath} Bath</small>
+                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-warning me-2"></i>{product.availability} Avail</small>
+                                    {/* <small className="flex-fill text-center py-2"><i className="fa fa-bath text-warning me-2"></i>{product.bath} Bath</small> */}
                                 </div>
                             </div>
                         </div>
@@ -215,7 +192,8 @@ const logout = () => {
                         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                             <div className="mb-4">
                                 <h1 className="mb-3">Contact With Our Certified Agent</h1>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
+                                <p>"Connect with our team of certified agents and open the door to your real estate aspirations."
+"Take the first step towards your dream property by reaching out to our experienced and certified agents today."</p>
                             </div>
                             <a href="/agentcontact" className="btn btn-warning py-3 px-4 me-2"><i className="fa fa-phone-alt me-2"></i>Make A Call</a>
                             <a href="/check" className="btn btn-dark py-3 px-4"><i className="fa fa-calendar-alt me-2"></i>Check Appoinment</a>
@@ -279,7 +257,7 @@ const logout = () => {
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <h5 className="text-white mb-4">Newsletter</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                    <p>"Unlock your dream home." </p>
                     <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
                         <input className="form-control bg-transparent text-white w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
                         <button type="button" className="btn btn-warning py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>

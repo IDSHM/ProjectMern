@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './single.css'
 import axios from 'axios';
 import { Link,useParams } from 'react-router-dom';
+import { appoContext } from '../context/AppointementContext';
 
 
 const Singlepage = () => {
+
+    const{addApposCount} = useContext(appoContext)
 
   const { id } = useParams();
 
@@ -45,6 +48,8 @@ const Singlepage = () => {
 const saveApp=(property)=>{
   console.log(property)
   setAppo((prev)=>({...prev,propertyDetails:{...property}}));
+  let agID = property.id
+  addApposCount(agID)
 console.log(appo);
 }
 
@@ -77,6 +82,7 @@ console.log(appo);
 
 // GET Data for Cards
 const [bookdata, setBookdata] = useState({
+    id:0,
   image: "",
   name: "",
   category: "",
@@ -94,6 +100,7 @@ useEffect(() => {
   const fetchPost = async () => {
     const { data } = await axios.get(`http://localhost:8000/api/bookappo/${id}`);
     setBookdata(data);
+    console.log(data);
   };
   fetchPost();
 }, []);
@@ -134,7 +141,7 @@ useEffect(() => {
                         </div>
                     <Link to="/contact" className="nav-item nav-link active">Contact</Link>
                     </div>
-                    <Link to="/login" className="btn btn-warning px-3 d-none d-lg-flex">Add Property</Link>
+                    <Link to="/login" className="btn btn-warning px-3 d-none d-lg-flex">LOGIN</Link>
                 </div>
             </nav>
         </div>

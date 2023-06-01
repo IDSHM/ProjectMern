@@ -158,7 +158,7 @@ const Register = () => {
                                     </div>
                                   
                                 </div>
-                                  <input type="submit" className="btnRegister" value="Register"/>
+                                  <input type="submit" className="btnRegister" value="Register" style={{marginLeft:"170px"}}/>
                         
                                   </div>
                                 </form>

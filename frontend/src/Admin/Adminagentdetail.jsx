@@ -3,7 +3,7 @@ import './single.css'
 import axios from 'axios';
 import { Link,useParams } from 'react-router-dom';
 
-const Detailsagent =()=> {
+const Adminagentdetail =()=> {
 
     
     const logout = () => {
@@ -242,4 +242,4 @@ const Detailsagent =()=> {
 }
 
 
-export default Detailsagent
+export default Adminagentdetail

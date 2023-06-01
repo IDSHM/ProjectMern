@@ -52,7 +52,7 @@ const Pagent=()=> {
                     </div>
                     <Link to="/contact" className="nav-item nav-link">Contact</Link>
                 </div>
-                <Link to="/login" className="btn btn-warning px-3 d-none d-lg-flex">Add Property</Link>
+                <Link to="/login" className="btn btn-warning px-3 d-none d-lg-flex">LOGIN</Link>
             </div>
         </nav>
     </div>
@@ -118,7 +118,8 @@ const Pagent=()=> {
                         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                             <div className="mb-4">
                                 <h1 className="mb-3">Contact With Our Certified Agent</h1>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
+                                <p>"Connect with our team of certified agents and open the door to your real estate aspirations."
+"Take the first step towards your dream property by reaching out to our experienced and certified agents today."</p>
                             </div>
                             <a href=" " className="btn btn-warning py-3 px-4 me-2"><i className="fa fa-phone-alt me-2"></i>Make A Call</a>
                             <a href=" " className="btn btn-dark py-3 px-4"><i className="fa fa-calendar-alt me-2"></i>Get Appoinment</a>
@@ -180,7 +181,7 @@ const Pagent=()=> {
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <h5 className="text-white mb-4">Newsletter</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                    <p>"Unlock your dream home." </p>
                     <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
                         <input className="form-control bg-transparent text-white w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
                         <button type="button" className="btn btn-warning py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>

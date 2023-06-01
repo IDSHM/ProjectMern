@@ -1,9 +1,11 @@
 import axios from 'axios';
-import React, { Component, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { appoContext } from '../context/AppointementContext';
 
 const Agentpagent =()=> {
 
+    const{apposCount} = useContext(appoContext);
 
     const logout = () => {
         window.localStorage.clear();
@@ -101,6 +103,7 @@ const Agentpagent =()=> {
                             <a className="btn btn-square mx-1" href=" "><i className="fab fa-facebook-f"></i></a>
                             <a className="btn btn-square mx-1" href=" "><i className="fab fa-twitter"></i></a>
                             <a className="btn btn-square mx-1" href=" "><i className="fab fa-instagram"></i></a>
+                            <Link className="btn btn-square mx-1" to={`/check`} title="Appontments" onClick={()=>localStorage.setItem('Agent',agent.id)}>{apposCount[agent.id]}</Link>
                         </div>
                     </div>
                     <div className="text-center p-4 mt-3">
@@ -127,7 +130,8 @@ const Agentpagent =()=> {
                         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                             <div className="mb-4">
                                 <h1 className="mb-3">Contact With Our Certified Agent</h1>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
+                                <p>"Connect with our team of certified agents and open the door to your real estate aspirations."
+"Take the first step towards your dream property by reaching out to our experienced and certified agents today."</p>
                             </div>
                             <a href="/agentcontact" className="btn btn-warning py-3 px-4 me-2"><i className="fa fa-phone-alt me-2"></i>Make A Call</a>
                             <a href="/check" className="btn btn-dark py-3 px-4"><i className="fa fa-calendar-alt me-2"></i>Check Appoinment</a>
@@ -189,7 +193,7 @@ const Agentpagent =()=> {
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <h5 className="text-white mb-4">Newsletter</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                    <p>"Unlock your dream home." </p>
                     <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
                         <input className="form-control bg-transparent text-white w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
                         <button type="button" className="btn btn-warning py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>

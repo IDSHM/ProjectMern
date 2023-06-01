@@ -4,7 +4,7 @@ import ReactPrint from 'react-to-print'
 
 
 const GetAppo = () => {
-    const { id } = useParams();
+    // const { id } = useParams();
 
 
     let nav = useNavigate();
@@ -16,13 +16,15 @@ const GetAppo = () => {
 
 
     useEffect(() => {
+        const id = localStorage.getItem('AgentId')
         fetch(`http://localhost:8000/api/book/getdata/${id}`,{
             method:"GET",
         })
         .then(res => res.json())
         .then((userData)=>{
-            console.log(userData, "userData");
-            setUser(userData.userData)
+            let propertiesArr = userData.data
+            console.log(propertiesArr);
+            setUser(propertiesArr)
         })
     },[])
 

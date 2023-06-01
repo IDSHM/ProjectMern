@@ -178,18 +178,19 @@ return (
         <div className="table-wrapper">
             <div className="table-title">
                 <div className="row">
-                    <div className="col-sm-6">
+                    <div className="col-sm-11">
                         {/* <h2>User <b>Management</b></h2> */}
                         <Link to="/adduser" className="btn btn-warning"><i class="fa-solid fa-user-plus"></i> <span>Add New User</span></Link>
 
                     </div>
 
-                    <div className="col-sm-6">
+                    <div className="col-sm-1">
                         <ReactPrint trigger={()=><button  className="btn btn-warning"><i class="fa-solid fa-print"></i>Print</button> }content ={()=>ref.current}/>
 
                     </div>
                 </div>
             </div>
+            <br /><br />
             <table className="table table-striped table-hover" ref={ref}>
                 <thead>
                     <tr>
@@ -241,7 +242,7 @@ return (
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
                             </div>
                             <a href="/admincontact" className="btn btn-warning py-3 px-4 me-2"><i className="fa fa-phone-alt me-2"></i>Make A Call</a>
-                            <a href="/check" className="btn btn-dark py-3 px-4"><i className="fa fa-calendar-alt me-2"></i>Check Appoinment</a>
+                            <a href="/adminviewappo" className="btn btn-dark py-3 px-4"><i className="fa fa-calendar-alt me-2"></i>Check Appoinment</a>
                         </div>
                     </div>
                 </div>

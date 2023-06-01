@@ -82,9 +82,9 @@ return (
                     </div>
                 </div>
                 <Link to="/contact" className="nav-item nav-link">Contact</Link>
-                <Link to="/login" className="nav-item nav-link">Login</Link>
+                {/* <Link to="/login" className="nav-item nav-link">Login</Link> */}
             </div>
-            <Link to="/login" className="btn btn-warning px-3 d-none d-lg-flex">Add Property</Link>
+            <Link to="/login" className="btn btn-warning px-3 d-none d-lg-flex">LOGIN</Link>
         </div>
     </nav>
 </div>
@@ -94,7 +94,7 @@ return (
         <div className="col-md-6 p-5 mt-lg-5">
             <br/><br/>
             <h1 className="display-5 animated fadeIn mb-4">Find A <span className="text-warning">Perfect Home</span> To Live With Your Family</h1>
-            <p className="animated fadeIn mb-4 pb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
+            <p className="animated fadeIn mb-4 pb-2">"Welcome to your dream home, where the possibilities are as endless as the horizon. Discover a world of possibilities, where your dream home becomes a reality."</p>
             <a href=" " className="btn btn-warning py-3 px-5 me-3 animated fadeIn">Get Started</a>
         </div>
         
@@ -130,7 +130,7 @@ return (
             <div className="col-lg-6">
                 <div className="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
                     <h1 className="mb-3">Property Listing</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
+                    <p>Discover the extraordinary possibilities that await you in the world of real estate.</p>
                 </div>
             </div>
             <div className="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
@@ -195,7 +195,8 @@ return (
     <div className="container">
         <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "600px"}}>
             <h1 className="mb-3">Property Types</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
+            <p>"Find your sanctuary in the heart of possibility." <br />
+"Where dreams find their address."</p>
         </div>
         <div className="row g-4">
         {catdata.map(i=>{
@@ -226,11 +227,11 @@ return (
                 </div>
             </div>
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <h1 className="mb-4">#1 Place To Find The Perfect Property</h1>
-                <p className="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!Hic dignissimos harum suscipit!Hic dignissimos harum suscipit!</p>
-                <p><i className="fa fa-check text-warning me-3"></i>ABCD</p>
-                <p><i className="fa fa-check text-warning me-3"></i>WXYZ</p>
-                <p><i className="fa fa-check text-warning me-3"></i>MNOP</p>
+                <h1 className="mb-4"># Place To Find The Perfect Property</h1>
+                <p className="mb-4">"Welcome to a realm where dreams take shape, where walls whisper stories, and where every door opens to a world of possibilities. In this vast tapestry of real estate, we invite you to embark on a journey of finding your perfect haven, a place where memories are woven and futures are forged. Whether you seek a tranquil abode nestled in nature's embrace or a vibrant urban retreat pulsating with energy, we are here to guide you through every step of the way, weaving together expertise, trust, and unparalleled service. Together, let's paint your vision on the canvas of reality, as we build not just houses, but the foundations of your dreams. Welcome to the extraordinary world of real estate, where we turn your aspirations into a tangible place called home."</p>
+                <p><i className="fa fa-check text-warning me-3"></i>Chandigarh</p>
+                <p><i className="fa fa-check text-warning me-3"></i>Ludhiana</p>
+                <p><i className="fa fa-check text-warning me-3"></i>Mohali</p>
                 <a className="btn btn-warning py-3 px-5 mt-3" href=" ">Read More</a>
             </div>
         </div>
@@ -249,7 +250,8 @@ return (
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                         <div className="mb-4">
                             <h1 className="mb-3">Contact With Our Certified Agent</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
+                            <p>"Connect with our team of certified agents and open the door to your real estate aspirations."
+"Take the first step towards your dream property by reaching out to our experienced and certified agents today."</p>
                         </div>
                         <a href=" " className="btn btn-warning py-3 px-4 me-2"><i className="fa fa-phone-alt me-2"></i>Make A Call</a>
                         <a href=" " className="btn btn-dark py-3 px-4"><i className="fa fa-calendar-alt me-2"></i>Get Appoinment</a>
@@ -264,7 +266,7 @@ return (
     <div className="container">
         <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "600px"}}>
             <h1 className="mb-3">Property Agents</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
+            <p>"Experience exceptional service and expertise with our dedicated team of property agents, ready to guide you through every step of your real estate journey."</p>
         </div>
         <div className="row g-4">
         {
@@ -294,52 +296,52 @@ return (
 
 
 
-    <div className="container-xxl py-5" >
-        <div className="container">
-            <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "600px"}}>
-                <h1 className="mb-3">Our Clients Say!</h1>
-                <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-            </div>
-          <div className=" testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">   {/* owl-carousel */}
-                <div className="testimonial-item bg-light rounded p-3">
-                    <div className="bg-white border rounded p-4">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                        <div className="d-flex align-items-center">
-                            <img className="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" alt="" style={{width: "45px", height: "45px"}}/>
-                            <div className="ps-3">
-                                <h6 className="fw-bold mb-1">Anuradha</h6>
-                                <small>Doctor</small>
+<div className="container-xxl py-5" >
+            <div className="container">
+                <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "600px"}}>
+                    <h1 className="mb-3">Our Clients Say!</h1>
+                    <p>We are incredibly grateful to Estracres for their exceptional service. Their dedication, professionalism, and strong advocacy on our behalf resulted in finding the perfect property. Highly recommended!</p>
+                </div>
+              <div className=" testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">   {/* owl-carousel */}
+                    <div className="testimonial-item bg-light rounded p-3">
+                        <div className="bg-white border rounded p-4">
+                            <p>Working with Estracres was a game-changer for us. Their knowledgeable agents helped us navigate the competitive market and find our dream home. Highly recommended!</p>
+                            <div className="d-flex align-items-center">
+                                <img className="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" alt="" style={{width: "45px", height: "45px"}}/>
+                                <div className="ps-3">
+                                    <h6 className="fw-bold mb-1">Anuradha</h6>
+                                    <small>Doctor</small>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="testimonial-item bg-light rounded p-3">
-                    <div className="bg-white border rounded p-4">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                        <div className="d-flex align-items-center">
-                            <img className="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" alt="" style={{width: "45px", height: "45px"}}/>
-                            <div className="ps-3">
-                                <h6 className="fw-bold mb-1">John</h6>
-                                <small>Businessman</small>
+                    <div className="testimonial-item bg-light rounded p-3">
+                        <div className="bg-white border rounded p-4">
+                            <p>We had an amazing experience selling our property through Estracres. Their proactive approach, attention to detail, and excellent negotiation skills resulted in a smooth and profitable transaction. Thank you!</p>
+                            <div className="d-flex align-items-center">
+                                <img className="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" alt="" style={{width: "45px", height: "45px"}}/>
+                                <div className="ps-3">
+                                    <h6 className="fw-bold mb-1">John</h6>
+                                    <small>Businessman</small>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="testimonial-item bg-light rounded p-3">
-                    <div className="bg-white border rounded p-4">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                        <div className="d-flex align-items-center">
-                            <img className="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" alt="" style={{width: "45px", height: "45px"}}/>
-                            <div className="ps-3">
-                                <h6 className="fw-bold mb-1">Kumar</h6>
-                                <small>Engineer</small>
+                    <div className="testimonial-item bg-light rounded p-3">
+                        <div className="bg-white border rounded p-4">
+                            <p>I can't thank Estracres enough for their exceptional service. From the initial consultation to the final closing, their team went above and beyond to ensure a seamless buying process. Their professionalism and responsiveness made all the difference. Highly satisfied!</p>
+                            <div className="d-flex align-items-center">
+                                <img className="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" alt="" style={{width: "45px", height: "45px"}}/>
+                                <div className="ps-3">
+                                    <h6 className="fw-bold mb-1">Kumar</h6>
+                                    <small>Engineer</small>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 <div className="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -390,7 +392,7 @@ return (
             </div>
             <div className="col-lg-3 col-md-6">
                 <h5 className="text-white mb-4">Newsletter</h5>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                <p>"Unlock your dream home." </p>
                 <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
                     <input className="form-control bg-transparent text-white w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
                     <button type="button" className="btn btn-warning py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>

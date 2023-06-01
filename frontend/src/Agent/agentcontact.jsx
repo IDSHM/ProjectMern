@@ -1,13 +1,51 @@
-import React, { Component } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
-class Agentcontact extends Component {
-  render() {
+import emailjs from '@emailjs/browser';
+import axios from 'axios';
+
+
+const Agentcontact =()=> {
+
     const logout = () => {
         window.localStorage.clear();
         window.location.href= "/";
     }
-    return (
-      <>
+
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message,setMessages]=useState("")
+
+    const form = useRef();
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_4aitv2k', 'template_q0gmp3r', form.current, 'ZCu2v1oscKCZ1AT2H')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+
+            axios.post("http://localhost:8000/api/contact", { name, email, message})
+            .then(() => {
+            setName("");
+            setEmail("");
+            setMessages("");
+            })
+            .catch((error) => alert(error.message));
+
+            alert('Thank you for contacting us && Email sent successfully');
+        };
+
+        
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+return (
+    <>
 
 <div className="container-xxl bg-white p-0">
         
@@ -110,36 +148,34 @@ class Agentcontact extends Component {
                     <div className="col-md-6">
                         <div className="wow fadeInUp" data-wow-delay="0.5s">
                         
-                            <form>
+                        <form ref={form} onSubmit={sendEmail}>
                                 <div className="row g-3">
                                     <div className="col-md-6">
                                         <div className="form-floating">
-                                            <input type="text" className="form-control" id="name" placeholder="Your Name"/>
+                                            <input type="text" className="form-control" name="user_name" id="name" placeholder="Your Name" onChange={(e) => setName(e.target.value)} value={name}/>
                                             <label for="name">Your Name</label>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-floating">
-                                            <input type="email" className="form-control" id="email" placeholder="Your Email"/>
+                                            <input type="email" className="form-control" name="user_email" id="email" placeholder="Your Email" onChange={(e) => setEmail(e.target.value)} value={email}/>
                                             <label for="email">Your Email</label>
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-floating">
-                                            <input type="text" className="form-control" id="subject" placeholder="Subject"/>
-                                            <label for="subject">Subject</label>
-                                        </div>
-                                    </div>
-                                    <div className="col-12">
-                                        <div className="form-floating">
-                                            <textarea className="form-control" placeholder="Leave a message here" id="message" style={{height: "150px"}}></textarea>
+                                            <textarea className="form-control" placeholder="Leave a message here" id="message"  style={{height: "150px"}}
+                                            name="message" onChange={(e) => setMessages(e.target.value)} value={message}/>
                                             <label for="message">Message</label>
                                         </div>
                                     </div>
                                     
                                     <div className="col-12">
-                                    <br/> 
-                                        <button className="btn btn-warning w-100 py-3" type="submit">Send Message</button>
+                                    <br/> <br />
+                                
+                                        <button className="btn btn-warning w-100 py-3" name='submit'  type="submit">Send Message</button>
+                                        {/* <br/> <br />
+                                        <button className="btn btn-warning w-100 py-3" type=""><Link to="/adminViewMsg">View All Messages</Link></button> */}
                                     </div>
                                 </div>
                             </form>
@@ -148,6 +184,7 @@ class Agentcontact extends Component {
                 </div>
             </div>
         </div>
+        
         
         <div className="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div className="container py-5">
@@ -197,7 +234,7 @@ class Agentcontact extends Component {
                     </div>
                     <div className="col-lg-3 col-md-6">
                         <h5 className="text-white mb-4">Newsletter</h5>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <p>"Unlock your dream home."</p>
                         <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
                             <input className="form-control bg-transparent text-white w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
                             <button type="button" className="btn btn-warning py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
@@ -228,10 +265,9 @@ class Agentcontact extends Component {
         
         <a href="# " className="btn btn-lg btn-warning btn-lg-square back-to-top"><i className="bi bi-arrow-up"></i></a>
     </div>
-      
-      </>
+    
+    </>
     )
-  }
 }
 
 export default Agentcontact

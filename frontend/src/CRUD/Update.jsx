@@ -167,7 +167,7 @@ return (
 
 <br/><br/>
 
-<div className="container">
+<div className="container" style={{marginLeft:"50px", paddingRight:"100px"}}>
       <div className="logincard">
         <h2 className='h2Reg' style={{textAlign: 'center'}}>Update Details</h2>
         <form>

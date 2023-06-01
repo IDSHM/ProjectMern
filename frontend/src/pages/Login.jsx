@@ -57,7 +57,7 @@ const Login = () => {
       }
       else if(outData.msg==='User-Login Success'){
         alert("User Succesfully Logged")
-        nav('/')
+        nav('/userhome')
       }
       else if(outData.msg==='Admin Logged Successfully'){
         alert("Admin Succesfully Logged")
@@ -77,23 +77,6 @@ const Login = () => {
 
 
   return (
-    // <div className="container">
-    //   <div className="logincard">
-    //     <h2 className='h2Reg'>Login</h2>
-    //     <form onSubmit={handleSubmit}>
-    //       <div className="input-group">
-    //         <label className='labelReg'>Username:</label>
-    //         <input className='inputReg' type="text" id='username' onChange={handleChange} required />
-    //       </div>
-    //       <div className="input-group">
-    //         <label className='labelReg'>Password:</label>
-    //         <input className='inputReg' type="password" id='password' onChange={handleChange} required />
-    //       </div>
-    //       <button className='buttonReg' type="submit">Login</button>
-    //     </form>
-    //   </div>
-    // </div>
-
 
 <>
 
@@ -135,7 +118,7 @@ const Login = () => {
                         </div> */}
                         <br />
                         <div className="row mb-3 px-3">
-                        <button type="submit" className="btn btn-blue text-center" >Login</button>
+                       <center> <button type="submit" className="btn btn-blue" >Login</button></center>
                         </div>
                         <div className="row mb-4 px-3">
                         <small className="font-weight-bold">Don't have an account? <Link to="/register" className="text-danger ">Register</Link></small>

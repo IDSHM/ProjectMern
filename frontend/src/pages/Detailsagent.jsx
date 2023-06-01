@@ -66,7 +66,7 @@ const Detailsagent =()=> {
                 </div>
                 {/* <Link to="/check" className="btn btn-warning px-3 d-none d-lg-flex">Check Appointment</Link>
                 &nbsp;&nbsp;&nbsp;&nbsp; */}
-                <Link to="/login"  className="btn btn-warning px-3 d-none d-lg-flex">Login</Link>
+                <Link to="/login"  className="btn btn-warning px-3 d-none d-lg-flex">LOGIN</Link>
             </div>
         </nav>
     </div>
