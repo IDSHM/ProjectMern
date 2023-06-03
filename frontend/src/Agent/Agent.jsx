@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import axios from "../axios";
 import '../style.css'
 import { Link, useNavigate } from 'react-router-dom';
+import config from "./config.json";
+
 
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -14,7 +16,7 @@ const Agent = () => {
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
   useEffect(() => {
-    const agentId = localStorage.getItem('AgentId');
+    const agentId = localStorage.getItem('AgentName');
     console.log(agentId);
     const fetchdata = async () => {
       const response = await axios.get(`http://localhost:8000/api/agentproperty/get/${agentId}`);
@@ -28,6 +30,17 @@ const Agent = () => {
     };
     fetchdata();
   }, []);
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+const [posts, setPosts] = useState([]);
+const[deletedConfirmation,setDCmtn] = useState(false);
+
+const handleDelete = async (userData) => {
+    setPosts(posts.filter((p) => p._id !== userData._id));
+    await axios.delete(`${config.apiUrl}/prop/${userData._id}`);
+    alert("Data Deleted Successfully")
+    setDCmtn(!deletedConfirmation)
+  };
+
 
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -163,7 +176,7 @@ return (
                                 <div className="d-flex border-top">
                                     <small className="flex-fill text-center border-end py-2"><i className="fa fa-ruler-combined text-warning me-2"></i>{product.area} Sqft</small>
                                     <small className="flex-fill text-center border-end py-2"><i className="fa fa-bed text-warning me-2"></i>{product.availability} Avail</small>
-                                    {/* <small className="flex-fill text-center py-2"><i className="fa fa-bath text-warning me-2"></i>{product.bath} Bath</small> */}
+                                    <small  className="flex-fill text-center py-2"><i className="fa-sharp fa-solid fa-delete-left"></i><Link onClick={() => handleDelete(product)}>Delete</Link></small>
                                 </div>
                             </div>
                         </div>

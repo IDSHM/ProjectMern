@@ -212,7 +212,7 @@ return (
                         <td>{userData.address}</td>
                         <td>
                             <Link to={`/update/${userData._id}`} className="update" title="Update" data-toggle="tooltip">              
-                            <i  onClick={() => nav(`/update/${userData._id}`)} class="fa-sharp fa-solid fa-gear"></i></Link> 
+                            <i class="fa-sharp fa-solid fa-gear"></i></Link> 
                             <Link to="" className="delete" title="Delete" data-toggle="tooltip">
                                 <i  onClick={() => handleDelete(userData)} className="fa-sharp fa-solid fa-delete-left"></i>
                             </Link>
@@ -239,7 +239,8 @@ return (
                         <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                             <div className="mb-4">
                                 <h1 className="mb-3">Contact With Our Certified Agent</h1>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
+                                <p>"Connect with our team of certified agents and open the door to your real estate aspirations."
+"Take the first step towards your dream property by reaching out to our experienced and certified agents today."</p>
                             </div>
                             <a href="/admincontact" className="btn btn-warning py-3 px-4 me-2"><i className="fa fa-phone-alt me-2"></i>Make A Call</a>
                             <a href="/adminviewappo" className="btn btn-dark py-3 px-4"><i className="fa fa-calendar-alt me-2"></i>Check Appoinment</a>

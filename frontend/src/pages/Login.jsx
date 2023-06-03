@@ -51,12 +51,12 @@ const Login = () => {
       console.log(outData);
 
       if(outData.msg==='Agent Logged Successfully'){
-        alert("Agent Succesfully Logged")
-        localStorage.setItem('AgentId',outData.agentId);
+        alert("Agent Successfully Logged")
+        localStorage.setItem('AgentName',outData.agentId);
         nav('/agenthome')
       }
       else if(outData.msg==='User-Login Success'){
-        alert("User Succesfully Logged")
+        alert("User Successfully Logged")
         nav('/userhome')
       }
       else if(outData.msg==='Admin Logged Successfully'){
@@ -118,7 +118,7 @@ const Login = () => {
                         </div> */}
                         <br />
                         <div className="row mb-3 px-3">
-                       <center> <button type="submit" className="btn btn-blue" >Login</button></center>
+                      <center> <button type="submit" className="btn btn-blue" >Login</button></center>
                         </div>
                         <div className="row mb-4 px-3">
                         <small className="font-weight-bold">Don't have an account? <Link to="/register" className="text-danger ">Register</Link></small>
@@ -141,7 +141,7 @@ const Login = () => {
         </div>
     </div>
 
-
+    
 </>
 
 

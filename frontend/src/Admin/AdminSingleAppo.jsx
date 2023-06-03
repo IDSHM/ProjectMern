@@ -17,7 +17,7 @@ const AdminSingleAppo = () => {
     useEffect(() => {
         const id= localStorage.getItem('Agent')
 
-        fetch(`http://localhost:8000/api/book/getdata/${id}`,{
+        fetch(`http://localhost:8000/api/book/getdatass/${id}`,{
             method:"GET",
         })
         .then(res => res.json())
@@ -223,7 +223,7 @@ return (
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <h5 className="text-white mb-4">Newsletter</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                    <p>"Unlock your dream home." </p>
                     <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
                         <input className="form-control bg-transparent text-white w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
                         <button type="button" className="btn btn-warning py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>

@@ -324,7 +324,7 @@ router.get("/book/getdata/:id",async (req, res) => {
   try {
       let agentId = req.params.id;
       console.log(agentId);
-      const alPro = await AppoModel.find({'propertyDetails.id':agentId});
+      const alPro = await AppoModel.find({'propertyDetails.agentusername':agentId});
       console.log(alPro);
       res.send({ status: "ok", data: alPro})
   
@@ -333,7 +333,18 @@ router.get("/book/getdata/:id",async (req, res) => {
   }
 });
 
-
+router.get("/book/getdatass/:id",async (req, res) => {
+  try {
+      let agentId = req.params.id;
+      console.log(agentId);
+      const alPro = await AppoModel.find({'propertyDetails.id':agentId});
+      console.log(alPro);
+      res.send({ status: "ok", data: alPro})
+  
+  } catch (error) {
+      console.log(error);
+  }
+});
 
 router.get("/books/getdatas",async (req, res) => {
   try {
@@ -389,6 +400,64 @@ router.get("/agentdetails/:id", async (req, res) => {
     res.status(500).send(error);
   }
 });
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// Update for agent prop details
+router.put("/prop/:id", async (req, res) => {
+  try {
+    const post = await AgentModel.findByIdAndUpdate(
+      req.params.id,
+      { image:req.body.image, 
+        name: req.body.name,
+        address: req.body.address,
+        area: req.body.area,
+        price: req.body.price,
+        description: req.body.description,
+        availability: req.body.availability },
+      { new: true }
+    );
+    if (!post) 
+    {return res.status(404).send("Data not found");}
+    else
+    {res.send(post);}
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+// Get a single post by id
+router.get("/prop/:id", async (req, res) => {
+  try {
+    const post = await AgentModel.findById(req.params.id);
+    if (!post) {
+      return res.status(404).send("Data not found");
+    }
+    else{
+      res.send(post);
+    }
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+// Delete 
+router.delete("/prop/:id", async (req, res) => {
+  try {
+    const post = await AgentModel.findByIdAndRemove(req.params.id);
+    if (!post){
+      return res.status(404).send("Data not found");
+    } 
+    else{
+      res.send(post);
+    }
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
 
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

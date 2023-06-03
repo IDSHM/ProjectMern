@@ -175,12 +175,12 @@ return (
         <div className="container-fluid header bg-white p-0">
             <div className="row g-0 align-items-center flex-column-reverse flex-md-row">
                 <div className="col-md-6 p-5 mt-lg-5">
-                    <h1 className="display-5 animated fadeIn mb-4">Contact Us</h1> 
+                    <h1 className="display-5 animated fadeIn mb-4">Agent Property Details</h1> 
                         <nav aria-label="breadcrumb animated fadeIn">
                         <ol className="breadcrumb text-uppercase">
                             <li className="breadcrumb-item"><a href="# ">Home</a></li>
                             <li className="breadcrumb-item"><a href="# ">Pages</a></li>
-                            <li className="breadcrumb-item text-body active" aria-current="page">Contact</li>
+                            <li className="breadcrumb-item text-body active" aria-current="page">Details</li>
                         </ol>
                     </nav>
                 </div>
@@ -215,6 +215,10 @@ return (
                                 <i className="fa fa-long-arrow-left"></i> 
                                 <span className="ml-1"><Link to="/agentp_list">Back</Link></span> 
                                 </div> 
+                                <div className="d-flex align-items-center"> 
+                                <i className="fa fa-long-arrow-right"></i> 
+                                <span className="ml-1"><Link to={`/agentupdate/${bookdata._id}`}>Update</Link></span> 
+                                </div> 
                                 {/* <i className="fa fa-shopping-cart text-muted"></i> */}
                             </div>
                             <div className="mt-4 mb-3"> <span className="text-uppercase text-muted brand">{bookdata.category}</span>
@@ -246,19 +250,19 @@ return (
                     </div>
                 </div>
 
-                <div className="row">
+                {/* <div className="row">
                     <div className="col-md-12">
                         <div className="images p-3">
                             <div className="text-center p-4"> 
 
                     <div className="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
                         <h1 className="mb-3">Book Appointment</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p>
-                    </div>
-                            <form ref={form} > 
+                        {/* <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus est alias iste aspernatur exercitationem iure sit. Hic dignissimos harum suscipit!</p> */}
+                {/*   </div>
+                            <form ref={form} > */}
                             {/* onSubmit={sendEmail} */}
                             
-                                <input type="text" id="name" name="name" placeholder="Enter Your Name" onInput={handleChange}/>
+                            {/*  <input type="text" id="name" name="name" placeholder="Enter Your Name" onInput={handleChange}/>
                                 <br />
                                 <br />
                                 <input type="email" id="email" name="email" placeholder="Enter Your Email" onInput={handleChange}/>
@@ -288,7 +292,7 @@ return (
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             </div>
         </div>
     </div>

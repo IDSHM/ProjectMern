@@ -58,9 +58,10 @@ import Userplist from "./User/userp_list";
 import UserSingle from './User/UserSingle';
 import Useragentdetail from './User/Useragentdetail';
 
-// import AppointmentPage from "./userpages/appointmentPage";
 
 
+import Pdf from './Pdf';
+import Agentupdate from './Agent/Agentupdate';
 
 
 
@@ -69,9 +70,7 @@ import Useragentdetail from './User/Useragentdetail';
 // import ViewProperty from './pages/ViewProperty';
 // import Admin from './Admin/Admin';
 // import BookAppointment from './pages/BookAppointment';
-import Pdf from './Pdf';
-import MulterAddProp from './pages/MulterAddProp';
-// import GetAppo from './Agent/GetAppo';
+// import MulterAddProp from './pages/MulterAddProp';
 
 
 
@@ -81,7 +80,6 @@ function App() {
     <AppointementContext>
     <div className="App">
       <Router>
-        {/* <Navbar /> */}
         <Routes>
           {/* <Route path='/' element={<Navbar />} /> */}
 
@@ -131,7 +129,7 @@ function App() {
           <Route path="/agentdetail/:id" element={<AgentDetails/>}/>
           <Route path="/agentdetail/:id" element={<Agent/>}/>
           <Route path="/agentpropdetail/:id" element={<AgentPropDetails/>}/>
-
+          <Route path="/agentupdate/:id" element={<Agentupdate/>}/>
 
           
           
@@ -156,7 +154,7 @@ function App() {
 
           <Route path='/pdf' element={<Pdf/>} />
           
-          <Route path='/multer' element={<MulterAddProp/>} />
+          {/* <Route path='/multer' element={<MulterAddProp/>} /> */}
 
 
           {/* <Route path='/viewproperty' element={<ViewProperty/>} /> */}

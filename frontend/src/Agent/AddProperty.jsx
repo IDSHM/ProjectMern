@@ -15,6 +15,8 @@ const AddProperty = () => {
     const [price, setPrice] = useState(0);
     const [description,setDescription]=useState("")
     const [availability, setAvailability] = useState(0);
+
+    let nav = useNavigate()
   
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -37,7 +39,7 @@ const AddProperty = () => {
         setAgentusername("");
 
         alert("Property Added Successfully")
-        //   navigate('/adminp_list')
+        nav('/agentp_list')
         })
         .catch((error) => alert(error.message));
     };
@@ -212,7 +214,7 @@ const logout = () => {
 
 
 
-    <div className="container-xxl py-5">
+    {/* <div className="container-xxl py-5">
         <div className="container">
             <div className="bg-light rounded p-3">
                 <div className="bg-white rounded p-4" style={{border: "1px dashed rgba(0, 185, 142, .3)"}}>
@@ -232,7 +234,7 @@ const logout = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </div> */}
 
 
 
@@ -287,7 +289,7 @@ const logout = () => {
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <h5 className="text-white mb-4">Newsletter</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                    <p>"Unlock your dream home."</p>
                     <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
                         <input className="form-control bg-transparent text-white w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
                         <button type="button" className="btn btn-warning py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>

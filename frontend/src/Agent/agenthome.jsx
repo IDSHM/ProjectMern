@@ -20,7 +20,7 @@ const Agenthome =()=> {
   //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
   useEffect(() => {
-    const agentId = localStorage.getItem('AgentId');
+    const agentId = localStorage.getItem('AgentName');
     console.log(agentId);
     const fetchdata = async () => {
       const response = await axios.get(`http://localhost:8000/api/agentproperty/get/${agentId}`);
