@@ -44,6 +44,7 @@ import AddCategory from './Category/AddCategory';
 import AddProperty from './Agent/AddProperty';
 import AgentDetails from './Agent/agentdetails';
 import AgentPropDetails from './Agent/AgentPropDetails';
+import Agentupdate from './Agent/Agentupdate';
 
 
 
@@ -61,17 +62,6 @@ import Useragentdetail from './User/Useragentdetail';
 
 
 import Pdf from './Pdf';
-import Agentupdate from './Agent/Agentupdate';
-
-
-
-
-// import Navbar from './Navbar';
-// import ViewProperty from './pages/ViewProperty';
-// import Admin from './Admin/Admin';
-// import BookAppointment from './pages/BookAppointment';
-// import MulterAddProp from './pages/MulterAddProp';
-
 
 
 
@@ -81,7 +71,6 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          {/* <Route path='/' element={<Navbar />} /> */}
 
 {/* Guest Pages */}
 
@@ -145,22 +134,7 @@ function App() {
           <Route path="/useragentdetail/:id" element={<Useragentdetail/>}/> 
 
 
-
-
-
-
-
-
-
           <Route path='/pdf' element={<Pdf/>} />
-          
-          {/* <Route path='/multer' element={<MulterAddProp/>} /> */}
-
-
-          {/* <Route path='/viewproperty' element={<ViewProperty/>} /> */}
-          {/* <Route path='/bookappo/:id' element={<BookAppointment/>} /> */}
-          {/* <Route path='/admin' element={<Admin/>} /> */}
-          {/* <Route path='/getappo' element={<GetAppo/>} /> */}
 
           
         </Routes>
